@@ -1,0 +1,54 @@
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 class="text-center">My Cool Game</h1>
+    <div id="menu" data-state="main">
+      <div id="main" class="nes-container with-title is-centered hidden">
+        <p class="title">Main Menu</p>
+        <p>Welcome Traveler, how would you like to proceed?</p>
+        <div>
+          <button type="button" data-action="new" class="nes-btn is-primary">New</button>
+          <button type="button"  data-action="choose" class="nes-btn is-primary">Continue</button>
+        </div>
+      </div>
+      <div id="choose" class="nes-container space-reg with-title hidden">
+        <p class="title">Choose your Adventurer:</p>
+        <div class="charCards"></div>
+      </div>
+      <div id="new" class="nes-container space-reg with-title hidden">
+        <p class="title">New Character</p>
+        <form action="character" method="post">
+          <div class="nes-field">
+            <label for="name_field">Your name</label>
+            <input type="text" id="name_field" name="name" class="nes-input">
+          </div>
+          <div class="space-reg">
+            <label for="default_select">Race</label>
+            <div class="nes-select">
+              <select required id="race_select" name="race">
+                <option value="" disabled selected hidden>Select...</option>
+              </select>
+            </div>
+          </div>
+          <div class="space-reg">
+            <label for="default_select">Race</label>
+            <div class="nes-select">
+              <select required id="class_select" name="class">
+                <option value="" disabled selected hidden>Select...</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
