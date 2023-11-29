@@ -4,7 +4,7 @@ const express = require("express");
 
 const Character = require("./models/Character");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
